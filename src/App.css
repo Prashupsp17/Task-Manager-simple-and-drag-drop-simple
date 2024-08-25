@@ -1,0 +1,129 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.todo-wrapper{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width:100%;
+}
+.modal{
+  position: absolute;
+  background-color: black;
+  color:white;
+}
+.taskList-wrapper{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  width: 100%;
+}
+
+/* Task Copy */
+/* Container for the task list */
+.my-tasklist {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  /* Space between columns */
+  padding: 1rem;
+  /* Padding around the grid */
+  height: calc(100vh - 4rem);
+  /* Full viewport height minus some margin */
+}
+
+/* Individual task columns */
+.my-tasklist>div {
+  border: 2px solid #ccc;
+  /* Light border around each column */
+  border-radius: 8px;
+  /* Rounded corners */
+  padding: 1rem;
+  /* Padding inside each column */
+  background-color: #f9f9f9;
+  /* Light background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow effect */
+  min-height: 200px;
+  /* Minimum height to make columns consistent */
+  width: 100%;
+  /* Full width of the column */
+  box-sizing: border-box;
+  /* Ensure padding and border are included in the width */
+}
+
+/* Title inside each column */
+.my-tasklist>div p {
+  font-weight: bold;
+  /* Make the section titles bold */
+  text-align: center;
+  /* Center align the text */
+  margin-bottom: 1rem;
+  /* Space between title and tasks */
+}
+
+/* Individual task items */
+.my-tasklist>div>div {
+  background-color: #fff;
+  /* White background for tasks */
+  border: 1px solid #ddd;
+  /* Light border around tasks */
+  border-radius: 4px;
+  /* Rounded corners */
+  padding: 0.5rem 1rem;
+  /* Padding inside each task */
+  margin-bottom: 0.5rem;
+  /* Space between tasks */
+  cursor: move;
+  /* Show a move cursor to indicate draggable items */
+  transition: background-color 0.2s;
+  /* Smooth background color transition */
+}
+
+.my-tasklist>div>div:hover {
+  background-color: #e3e3e3;
+  /* Slightly darker background on hover */
+}
+
+
+.my-todo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
